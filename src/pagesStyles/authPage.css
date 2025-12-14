@@ -1,0 +1,108 @@
+.auth{
+  width: 60vw;
+  height: 80vh;
+  background-color: rgb(70, 70, 70);
+  min-width: 384px;
+  border-radius:12px ;
+}
+.go-back{
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  background-image: url('/back.svg');
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  transition: all 0.5s ease;
+}
+.go-back:hover{
+  cursor: pointer;
+  scale:1.1
+}
+.go-back:active{
+  opacity: 0.7;
+}
+.centerer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+width: 100vw;
+}
+.header{
+  display: flex;
+  margin-left: 9%;
+  margin-top: 4%;
+  font-size: 40px;
+}
+.credentials{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40vh;
+}
+.input-field{
+  width: 80%;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+  padding-left: 12px;
+  font-size: 20px;
+}
+.auth-button{
+  width: 80%;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.auth-button:hover{
+  cursor: pointer;
+  background-color: rgb(120, 120, 120);
+}
+.auth-button:active{
+  transform: scale(0.98);
+}
+
+.auth-switch{
+display: flex;
+justify-content: center;
+height: 10vh;
+font-size: 20px;
+align-items: center;
+}
+.direction{
+  margin-left: 4px;
+font-size: 20px;
+text-align: center;
+padding: 0;
+height: 30px;
+border: none;
+background-color: transparent;
+}
+.direction:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.direction:active{
+color: rgb(192, 47, 47);
+}
+
+.error-messages{
+  height: 4vh;
+  margin: 0;
+  margin-left: 9%;
+  margin-top:4% ;
+  width:49vw ;
+  font-size: 20px;
+  color: red;
+}

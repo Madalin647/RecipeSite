@@ -1,0 +1,139 @@
+.mainHeader{
+  padding-top: 3vh;
+  margin-left: 20px;
+}
+.mainHeader p{
+  margin-top: 1vh;
+  font-size: 24px;
+  margin-left: 8px;
+  font-weight: 400;
+}
+.mainHeader h1{
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.account-menu{
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  height: 100vh;
+  width: 200px;
+  left: 82px;
+  background-color: rgb(70, 70, 70);
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius:12px 0px 0px 12px;
+align-items: start;
+}
+.sticky-container{
+  position: relative;
+}
+#menu-checkbox:checked ~ .account-menu{
+  transform: translateX(-200px);
+}
+.hamburgerMenu{
+  z-index: 10;
+  height: 0;
+  top: 0;
+  display: flex;
+justify-content: end;
+position: sticky;
+}
+.hM-button{
+  z-index: 10;
+  margin-right: 10px;
+  top: 10px;
+  width: 48px;
+  height: 48px;
+background-color: transparent;
+background-image: url('/hamburgerMenu.svg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+  border: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.hM-button:hover{
+  cursor: pointer;
+  scale:1.1
+}
+.hM-button:active{
+  opacity: 0.7;
+}
+
+.futuredRecipies{
+display: grid;
+width: 96%;
+min-height: 64vh;
+background-color: rgba(173, 163, 163, 0.19);
+margin: auto;
+border-radius: 12px;
+grid-template-columns: repeat(3, 1fr);
+padding-right: 8px;
+padding-top: 36px;
+position: relative;
+margin-bottom: 2%;
+}
+.fr-header{
+position: absolute;
+height: 16px;
+margin: 0;
+top: 8px;
+left: 16px;
+font-size: 20px;
+font-weight: 400;
+}
+
+.elements{
+margin-bottom: 8px;
+margin-left: 8px;
+border-radius:4px ;
+height: 500px;
+border: 2px solid rgb(192, 47, 47);
+padding: 10px;
+  background: linear-gradient(90deg ,rgba(255, 255, 255, 0), rgba(199, 199, 199, 0.2), rgba(255, 255, 255, 0));
+  display: flex;
+  flex-direction: column;
+  background-size: 200% 100%;
+animation: loadAnimation 10s infinite linear;
+}
+@keyframes loadAnimation{
+    0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  .futuredRecipies{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .futuredRecipies{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .fr-header{
+   width: 100%;
+left: 0;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+  }
+}
+
+.menu-names{
+  font-size: 20px;
+  margin-left: 12px;
+  font-weight: 400;
+}
+.menu-link{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 12px;
+}
